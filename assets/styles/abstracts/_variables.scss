@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// Base colors
+$black: #000;
+$white: #fff;
+$brand: #91262E;
+$body-color: $white;
+$p-color: $black; // <p> tag color
+$h-color: $black; // headings color
+$a-color: $black; // links color
+$p-color-inv: $white; // <p> tag color inverted
+$h-color-inv: $white; // headings color inverted
+$a-color-inv: $white; // links color inverted
+
+// Font sizes
+$base-font-size: 20px;
+
+/// Regular font family
+
+$font-serif: 'PT Serif', serif;
+$font-sans-serif: 'Open Sans', sans-serif;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$assets-dir: 'assets/' !default;
+$images-dir: 'assets/images/' !default;
+$plugins-dir: 'assets/images/' !default;

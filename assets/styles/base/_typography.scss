@@ -1,0 +1,35 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $black;
+  font-family: $font-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $base-font-size;
+}
+p{
+	color: $p-color;
+}
+a{
+	color: $a-color;
+}
+h1, h2 {
+  font-family: $font-serif;
+  font-style: normal;
+  font-weight: 400;
+  word-wrap: break-word;
+  hyphens: auto;
+  margin-top: 0;
+}
+h1 {
+  font-size: 8vw;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+// bootstrap overwrites
+.container {
+  width: 100%;
+  padding: 0;
+}

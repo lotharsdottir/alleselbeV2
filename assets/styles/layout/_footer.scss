@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+//
+.footer {
+  background: $white;
+  padding: 20px 60px;
+  @include media-width(700){
+    padding: 0 20px;
+  }
+  a {
+    font-size: 8vw;
+    line-height: 1;
+    &:hover {
+      color: $brand;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  .nav {
+    z-index: 1;
+    a {
+      &:hover {
+        color: $brand;
+      }
+    }
+  }
+  .nav-menu {
+    display: block;
+    font-weight: 600;
+    line-height: 60px;
+    height: 60px;
+    padding-left: 60px;
+    @include media-width(700){
+      padding-left: 20px;
+    }
+  }
+  .nav-menu_list {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    overflow: hidden;
+    background: $white;
+    padding: 10px 60px;
+    li {
+      font-size: 8vw;
+      a {
+        font-size: 8vw;
+        &:hover {
+          color: $brand;
+        }
+      }
+    }
+  }
+  @keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .nav-menu_logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: url("assets/svg/logo.svg") no-repeat;
+    height: 25px;
+    width: 14px;
+    background-size: contain;
+  }
+}
+
+/*.page-title{
+	padding: 15px 0;
+	margin: 35px auto;
+	h1{
+		font-size: 75px;
+		@include media-width(1999){
+			font-size: 60px;
+		}
+		@include media-width(991){
+			font-size: 45px;
+		}
+		@include media-width(717){
+			font-size: 40px;
+		}
+		@include media-width(642){
+			font-size: 30px;
+		}
+		@include media-width(400){
+			font-size: 25px;
+		}
+		@include media-width(341){
+			font-size: 20px;
+		}
+	}
+	@include media-width(599){
+		width: 95%;
+	}
+}*/
+
+
+

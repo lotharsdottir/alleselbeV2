@@ -1,0 +1,150 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  height: 100%;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.row {
+  position: relative;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $a-color;
+  text-decoration: none;
+  display: inline-block;
+  &:hover {
+    text-decoration: none;
+    color: $a-color-inv;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.container {
+  background: $white;
+  > div {
+    background: $white;
+    padding: 20px 60px;
+    @include media-width(700){
+      padding: 10px 20px;
+    }
+    h1 {
+      color: $black;
+    }
+    .more,
+    a {
+      font-size: 8vw;
+      color: $brand;
+      text-transform: uppercase;
+      line-height: 1;
+      &:hover {
+        color: $black;
+      }
+    }
+    .hyperlink {
+      text-transform: none;
+    }
+  }
+}
+
+.fixed-img {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 60vh;
+  position: relative;
+}
+
+.parallax {
+  position: relative;
+  width: 100px;
+  height: 300px;
+  display: block;
+}
+
+.parallax-bg {
+  background: url("assets/images/schinkenbrot.jpg") no-repeat;
+  background-size: 400px;
+  padding-right: 25%;
+}
+
+.logo-circle {
+  animation: rotating 20s linear infinite;
+  height: 300px;
+  width: 300px;
+  position: fixed;
+  top: 40px;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 2;
+  mix-blend-mode: difference;
+}
+
+.parallax-container {
+  top: 40%;
+  right: 0;
+  z-index: 0;
+  position: absolute;
+}
+.parallax-element {
+  position: relative;
+  width: auto;
+}
+/*.contact {
+  padding-left: 60px;
+  line-height: 40px;
+  height: 40px;
+  font-size: 16px;
+  @include media-width(700){
+    padding-left: 20px;
+  }
+}*/
+.contact {
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  transform: rotate(-90deg);
+  z-index: 2;
+  transform-origin: left;
+  p {
+    color: $black;
+  }
+}
