@@ -80,35 +80,50 @@ ul li {
   padding: 0;
 }
 
+#fullpage,
 .container {
   background: #fff;
 }
-.container > div {
+#fullpage > .section,
+.container > .section {
+  max-height: 100vh;
+  overflow: hidden;
   background: #fff;
   padding: 20px 60px;
 }
 @media all and (max-width: 700px) {
-  .container > div {
+  #fullpage > .section,
+.container > .section {
     transition: 0.5s;
     padding: 10px 20px;
   }
 }
-.container > div h1 {
+#fullpage > .section:first-child,
+.container > .section:first-child {
+  padding-top: 10px;
+}
+#fullpage > .section .teaser h1,
+.container > .section .teaser h1 {
   color: #000;
 }
-.container > div .more,
-.container > div a {
+#fullpage > .section .teaser .more,
+#fullpage > .section .teaser a,
+.container > .section .teaser .more,
+.container > .section .teaser a {
   font-size: 8vw;
   color: #91262E;
   text-transform: uppercase;
   line-height: 1;
 }
-.container > div .more:hover,
-.container > div a:hover {
+#fullpage > .section .teaser .more:hover,
+#fullpage > .section .teaser a:hover,
+.container > .section .teaser .more:hover,
+.container > .section .teaser a:hover {
   color: #000;
 }
-.container > div .hyperlink {
-  text-transform: none;
+#fullpage > .section .teaser .hyperlink,
+.container > .section .teaser .hyperlink {
+  text-decoration: none;
 }
 
 .fixed-img {
@@ -138,7 +153,7 @@ ul li {
   height: 300px;
   width: 300px;
   position: fixed;
-  top: 40px;
+  top: 10px;
   right: 0;
   left: 0;
   margin-right: auto;
@@ -2743,7 +2758,6 @@ ul.linear-list li {
   font-weight: 600;
   line-height: 60px;
   height: 60px;
-  padding-left: 60px;
 }
 @media all and (max-width: 700px) {
   .header .nav-menu {
@@ -2782,11 +2796,11 @@ ul.linear-list li {
 }
 .header .nav-menu_logo {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 13px;
+  right: 0px;
   background: url("assets/svg/logo.svg") no-repeat;
-  height: 25px;
-  width: 14px;
+  height: 41px;
+  width: 34px;
   background-size: contain;
 }
 
@@ -2849,45 +2863,45 @@ ul.linear-list li {
  * ---------------------------------------------------
  */
 /* --------------------- 4.1 Home page --------------------- */
-.index .container > div:nth-child(2n+3) {
+.index #fullpage > .section:nth-child(1n+2) {
   background: #91262E;
 }
-.index .container > div:nth-child(2n+3) h1 {
+.index #fullpage > .section:nth-child(1n+2) .teaser h1 {
   color: #000;
 }
-.index .container > div:nth-child(2n+3) .more,
-.index .container > div:nth-child(2n+3) a {
+.index #fullpage > .section:nth-child(1n+2) .teaser .more,
+.index #fullpage > .section:nth-child(1n+2) .teaser a {
   color: #fff;
 }
-.index .container > div:nth-child(2n+3) .more:hover,
-.index .container > div:nth-child(2n+3) a:hover {
+.index #fullpage > .section:nth-child(1n+2) .teaser .more:hover,
+.index #fullpage > .section:nth-child(1n+2) .teaser a:hover {
   color: #000;
 }
-.index .container > div:nth-child(2n+4) {
+.index #fullpage > .section:nth-child(1n+3) {
   background: #000;
 }
-.index .container > div:nth-child(2n+4) h1 {
+.index #fullpage > .section:nth-child(1n+3) .teaser h1 {
   color: #fff;
 }
-.index .container > div:nth-child(2n+4) .more,
-.index .container > div:nth-child(2n+4) a {
+.index #fullpage > .section:nth-child(1n+3) .teaser .more,
+.index #fullpage > .section:nth-child(1n+3) .teaser a {
   color: #91262E;
 }
-.index .container > div:nth-child(2n+4) .more:hover,
-.index .container > div:nth-child(2n+4) a:hover {
+.index #fullpage > .section:nth-child(1n+3) .teaser .more:hover,
+.index #fullpage > .section:nth-child(1n+3) .teaser a:hover {
   color: #fff;
 }
-.index .container > div:nth-child(2n+4) p {
+.index #fullpage > .section:nth-child(1n+3) .teaser p {
   color: #fff;
 }
-.index .container > div .contact {
+.index #fullpage > .section .contact {
   white-space: nowrap;
 }
-.index .container > div p {
+.index #fullpage > .section p {
   font-size: 8vw;
   line-height: 1;
 }
-.index .container .map {
+.index #fullpage .map {
   position: relative;
   padding-bottom: 56.25%;
   /* ratio 16x9 */
@@ -2896,14 +2910,14 @@ ul.linear-list li {
   width: 100%;
   height: auto;
 }
-.index .container .map iframe {
+.index #fullpage .map iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.index .container .filter {
+.index #fullpage .filter {
   -webkit-filter: invert(1);
   height: 100px;
   width: 100px;

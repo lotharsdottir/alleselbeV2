@@ -22,7 +22,6 @@
     font-weight: 600;
     line-height: 60px;
     height: 60px;
-    padding-left: 60px;
     @include media-width(700){
       padding-left: 20px;
     }
@@ -59,11 +58,11 @@
 
   .nav-menu_logo {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 13px;
+    right: 0px;
     background: url("assets/svg/logo.svg") no-repeat;
-    height: 25px;
-    width: 14px;
+    height: 41px;
+    width: 34px;
     background-size: contain;
   }
 }

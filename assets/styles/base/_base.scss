@@ -55,29 +55,37 @@ ul {
   }
 }
 
+#fullpage,
 .container {
   background: $white;
-  > div {
+  > .section {
+    max-height: 100vh;
+    overflow: hidden;
     background: $white;
     padding: 20px 60px;
     @include media-width(700){
       padding: 10px 20px;
     }
-    h1 {
-      color: $black;
+    &:first-child {
+      padding-top: 10px;
     }
-    .more,
-    a {
-      font-size: 8vw;
-      color: $brand;
-      text-transform: uppercase;
-      line-height: 1;
-      &:hover {
+    .teaser {
+      h1 {
         color: $black;
       }
-    }
-    .hyperlink {
-      text-transform: none;
+      .more,
+      a {
+        font-size: 8vw;
+        color: $brand;
+        text-transform: uppercase;
+        line-height: 1;
+        &:hover {
+          color: $black;
+        }
+      }
+      .hyperlink {
+        text-decoration: none;
+      }
     }
   }
 }
@@ -109,7 +117,7 @@ ul {
   height: 300px;
   width: 300px;
   position: fixed;
-  top: 40px;
+  top: 10px;
   right: 0;
   left: 0;
   margin-right: auto;

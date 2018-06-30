@@ -3,35 +3,39 @@
 // -----------------------------------------------------------------------------
 // teaser
 .index {
-  .container {
-    > div {
-      &:nth-child(2n+3) {
+  #fullpage {
+     > .section {
+      &:nth-child(1n+2) {
         background: $brand;
-        h1 {
-          color: $black;
-        }
-        .more,
-        a {
-          color: $white;
-          &:hover {
+        .teaser {
+          h1 {
             color: $black;
+          }
+          .more,
+          a {
+            color: $white;
+            &:hover {
+              color: $black;
+            }
           }
         }
       }
-      &:nth-child(2n+4) {
+      &:nth-child(1n+3) {
         background: $black;
-        h1 {
-          color: $white;
-        }
-        .more,
-        a {
-          color: $brand;
-          &:hover {
+        .teaser {
+          h1 {
             color: $white;
           }
-        }
-        p {
-          color: $white;
+          .more,
+          a {
+            color: $brand;
+            &:hover {
+              color: $white;
+            }
+          }
+          p {
+            color: $white;
+          }
         }
       }
       .contact {
